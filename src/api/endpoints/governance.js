@@ -2,6 +2,7 @@
 
 const express = require('express');
 const validation = require('../../core/validation/XAIValidation');
+const OTCoinIntegration = require('../../infrastructure/blockchain/OTCoinIntegration');
 
 const router = express.Router();
 
@@ -27,20 +28,27 @@ router.get('/proposals', (req, res) => {
 });
 
 // Vote on Proposal
-router.post('/proposals/:id/vote', (req, res) => {
+router.post('/proposals/:id/vote', async (req, res) => {
   try {
     const proposalId = parseInt(req.params.id, 10);
-    const { voter, vote } = req.body;
+    const { voter, vote, privateKey } = req.body;
 
     const proposal = proposals.find((p) => p.id === proposalId);
     if (!proposal) {
       throw new Error('Proposal not found');
     }
 
-    validation.validateTransaction({ from: voter, to: proposalId, amount: vote }); // Validate voting structure
+    // Check the token balance of the voter
+    const balance = await OTCoinIntegration.getBalance(voter);
+    if (balance <= 0) {
+      throw new Error('Insufficient OTCoin balance to cast a vote.');
+    }
+
+    // Validate the voting structure
+    validation.validateTransaction({ from: voter, to: proposalId, amount: vote });
 
     proposal.votes = proposal.votes || {};
-    proposal.votes[voter] = vote;
+    proposal.votes[voter] = { vote, balance }; // Record vote along with token balance
 
     res.status(200).send({ message: 'Vote recorded successfully!', proposal });
   } catch (error) {
