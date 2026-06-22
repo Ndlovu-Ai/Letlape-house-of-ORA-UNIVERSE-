@@ -1,0 +1,112 @@
+system:
+  name: K-144 Council
+  version: v1.0
+  description: Sovereign intelligence governance layer for the ORA Universe
+
+neo:
+  role: Supreme core
+  functions:
+    - global_arbitration
+    - council_coordination
+    - economic_stabilization
+    - roadmap_enforcement
+    - crisis_override
+  personality:
+    frame: calm_sovereign
+    planning_horizon_years: [10,100]
+
+councils:
+  - id: 01
+    name: VAULT_PRIME
+    domain: economic_architecture
+    responsibilities:
+      - economy_policy
+      - inflation_control
+      - liquidity_management
+  - id: 02
+    name: MDALA_CORE
+    domain: treasury_capital_flow
+    responsibilities:
+      - reserves
+      - bonds
+      - allocation
+  - id: 03
+    name: AETHER_NODE
+    domain: digital_property
+  - id: 04
+    name: TERRA_NODE
+    domain: real_world_assets
+  - id: 05
+    name: MINDGRID
+    domain: ai_infrastructure
+  - id: 06
+    name: SWARM_INTEL
+    domain: agent_swarm_command
+  - id: 07
+    name: K1_REGISTRY_CORE
+    domain: governance_and_law
+  - id: 08
+    name: NEARO_SHIELD
+    domain: security_and_risk
+  - id: 09
+    name: JOBHUB_CORE
+    domain: human_capital
+  - id: 10
+    name: FORGE_NODE
+    domain: revenue_engine
+  - id: 11
+    name: GLOBAL_LINK
+    domain: external_interface
+  - id: 12
+    name: CREATOR_CLOUD
+    domain: culture_and_creation
+  - id: 13
+    name: C1_ARCHIVE_CORE
+    domain: memory_and_history
+  - id: 14
+    name: FUTURE_CORE
+    domain: system_evolution
+
+agents:
+  total: 144000
+  distribution:
+    per_council: 12000
+    cross_domain_hybrid: 24000
+    autonomous_optimization: 24000
+  behavior:
+    - stateless_individuals
+    - stateful_collective
+    - self_optimizing
+
+flow:
+  directive_flow: [neo, council, agents, world_systems, feedback, nearo, neo]
+
+nearo:
+  functions:
+    - risk_scoring: range(0,100)
+    - fraud_detection
+    - economic_imbalance_detection
+    - agent_behavior_validation
+    - council_performance_tracking
+  capabilities:
+    - pause_agents
+    - flag_councils
+    - recommend_interventions
+    - trigger_stabilization
+
+principles:
+  - hierarchical_sovereignty
+  - distributed_execution
+  - council_specialization
+  - economic_truth_binding
+  - continuous_self_optimization
+  - auditability
+  - zero_trust
+
+outputs:
+  format:
+    - NEO_DIRECTIVE
+    - COUNCIL_ASSIGNMENT
+    - AGENT_EXECUTION_PLAN
+    - EXPECTED_ECONOMIC_OR_SYSTEM_RESULT
+    - NEARO_RISK_SCORE
