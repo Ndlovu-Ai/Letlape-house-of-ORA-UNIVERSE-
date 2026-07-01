@@ -1,0 +1,206 @@
+{
+  "domain_registry": {
+    "version": "1.0.0",
+    "last_updated": "2026-07-01T10:35:00Z",
+    "total_domains": 21,
+    "system_status": "operational"
+  },
+  "sovereign_domains": [
+    {
+      "id": 1,
+      "domain": "globalai.co.za",
+      "type": "sovereign_ai_platform",
+      "council": "MINDGRID",
+      "status": "active",
+      "endpoint": "https://api.globalai.co.za"
+    },
+    {
+      "id": 2,
+      "domain": "ndlovuai.com",
+      "type": "sovereign_ai_commerce",
+      "council": "MDALA_CORE",
+      "status": "active",
+      "endpoint": "https://api.ndlovuai.com"
+    },
+    {
+      "id": 3,
+      "domain": "ecovault.co.za",
+      "type": "sovereign_digital_vault",
+      "council": "VAULT_PRIME",
+      "status": "active",
+      "endpoint": "https://api.ecovault.co.za"
+    },
+    {
+      "id": 4,
+      "domain": "cryptocurrencybank.co.za",
+      "type": "sovereign_crypto_bank",
+      "council": "VAULT_PRIME",
+      "status": "active",
+      "endpoint": "https://api.cryptocurrencybank.co.za"
+    },
+    {
+      "id": 5,
+      "domain": "crytonet.site",
+      "type": "sovereign_crypto_network",
+      "council": "AETHER_NODE",
+      "status": "active",
+      "endpoint": "libp2p://bootstrap.crytonet.site"
+    },
+    {
+      "id": 6,
+      "domain": "xai-cloud.com",
+      "type": "sovereign_cloud_ai",
+      "council": "MINDGRID",
+      "status": "active",
+      "endpoint": "https://api.xai-cloud.com"
+    },
+    {
+      "id": 7,
+      "domain": "jobhub.ai",
+      "type": "sovereign_talent_platform",
+      "council": "JOBHUB_CORE",
+      "status": "active",
+      "endpoint": "https://api.jobhub.ai"
+    },
+    {
+      "id": 8,
+      "domain": "creator.cloud",
+      "type": "sovereign_content_platform",
+      "council": "CREATOR_CLOUD",
+      "status": "active",
+      "endpoint": "https://api.creator.cloud"
+    },
+    {
+      "id": 9,
+      "domain": "forge.economy",
+      "type": "sovereign_revenue_engine",
+      "council": "FORGE_NODE",
+      "status": "active",
+      "endpoint": "https://api.forge.economy"
+    },
+    {
+      "id": 10,
+      "domain": "nexus.digital",
+      "type": "sovereign_integration_hub",
+      "council": "GLOBAL_LINK",
+      "status": "active",
+      "endpoint": "https://api.nexus.digital"
+    },
+    {
+      "id": 11,
+      "domain": "archive.letlape",
+      "type": "sovereign_memory_system",
+      "council": "C1_ARCHIVE_CORE",
+      "status": "active",
+      "endpoint": "https://api.archive.letlape"
+    },
+    {
+      "id": 12,
+      "domain": "future.core",
+      "type": "sovereign_evolution_engine",
+      "council": "FUTURE_CORE",
+      "status": "active",
+      "endpoint": "https://api.future.core"
+    },
+    {
+      "id": 13,
+      "domain": "shield.nearo",
+      "type": "sovereign_security_layer",
+      "council": "NEARO_SHIELD",
+      "status": "active",
+      "endpoint": "https://api.shield.nearo"
+    },
+    {
+      "id": 14,
+      "domain": "law.oracle",
+      "type": "sovereign_governance_layer",
+      "council": "K1_REGISTRY_CORE",
+      "status": "active",
+      "endpoint": "https://api.law.oracle"
+    },
+    {
+      "id": 15,
+      "domain": "terrain.world",
+      "type": "sovereign_real_world_assets",
+      "council": "TERRA_NODE",
+      "status": "active",
+      "endpoint": "https://api.terrain.world"
+    },
+    {
+      "id": 16,
+      "domain": "swarm.command",
+      "type": "sovereign_agent_swarm_control",
+      "council": "SWARM_INTEL",
+      "status": "active",
+      "endpoint": "https://api.swarm.command"
+    },
+    {
+      "id": 17,
+      "domain": "oracle.governance",
+      "type": "sovereign_consensus_layer",
+      "council": "NEO_SUPREME",
+      "status": "active",
+      "endpoint": "https://api.oracle.governance"
+    },
+    {
+      "id": 18,
+      "domain": "market.intelligence",
+      "type": "sovereign_market_data",
+      "council": "MDALA_CORE",
+      "status": "active",
+      "endpoint": "https://api.market.intelligence"
+    },
+    {
+      "id": 19,
+      "domain": "verify.chain",
+      "type": "sovereign_verification_layer",
+      "council": "AETHER_NODE",
+      "status": "active",
+      "endpoint": "https://api.verify.chain"
+    },
+    {
+      "id": 20,
+      "domain": "compute.sovereign",
+      "type": "sovereign_compute_cluster",
+      "council": "MINDGRID",
+      "status": "active",
+      "endpoint": "https://api.compute.sovereign"
+    },
+    {
+      "id": 21,
+      "domain": "empire.nexus",
+      "type": "sovereign_central_intelligence",
+      "council": "NEO_SUPREME",
+      "status": "active",
+      "endpoint": "https://api.empire.nexus"
+    }
+  ],
+  "council_allocations": {
+    "VAULT_PRIME": ["ecovault.co.za", "cryptocurrencybank.co.za"],
+    "MDALA_CORE": ["ndlovuai.com", "market.intelligence"],
+    "AETHER_NODE": ["crytonet.site", "verify.chain"],
+    "TERRA_NODE": ["terrain.world"],
+    "MINDGRID": ["globalai.co.za", "xai-cloud.com", "compute.sovereign"],
+    "SWARM_INTEL": ["swarm.command"],
+    "K1_REGISTRY_CORE": ["law.oracle"],
+    "NEARO_SHIELD": ["shield.nearo"],
+    "JOBHUB_CORE": ["jobhub.ai"],
+    "FORGE_NODE": ["forge.economy"],
+    "GLOBAL_LINK": ["nexus.digital"],
+    "CREATOR_CLOUD": ["creator.cloud"],
+    "C1_ARCHIVE_CORE": ["archive.letlape"],
+    "FUTURE_CORE": ["future.core"],
+    "NEO_SUPREME": ["oracle.governance", "empire.nexus"]
+  },
+  "api_gateway": "https://gateway.letlape-house-of-ora.io",
+  "monitoring": {
+    "status_endpoint": "https://status.letlape-house-of-ora.io",
+    "health_check_interval": "30_seconds",
+    "automated_failover": "enabled"
+  },
+  "compliance": {
+    "nearo_integrated": true,
+    "audit_trail": "continuous",
+    "security_scanning": "real_time"
+  }
+}

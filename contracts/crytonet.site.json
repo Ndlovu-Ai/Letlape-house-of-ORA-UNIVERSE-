@@ -1,0 +1,68 @@
+{
+  "domain": "crytonet.site",
+  "type": "sovereign_crypto_network",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "CryptoNet - Distributed Peer-to-Peer Network Layer",
+  "governance": {
+    "council_id": "03",
+    "council_name": "AETHER_NODE",
+    "oversight": "digital_property"
+  },
+  "services": [
+    {
+      "name": "p2p_network",
+      "type": "distributed_mesh",
+      "capacity": "1000000_nodes",
+      "protocol": "libp2p"
+    },
+    {
+      "name": "distributed_storage",
+      "type": "ipfs_backed",
+      "capacity": "petabyte_scale",
+      "protocol": "ipfs_protocol"
+    },
+    {
+      "name": "consensus_coordination",
+      "type": "byzantine_fault_tolerant",
+      "capacity": "dynamic",
+      "protocol": "custom_bft"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "decentralized_mesh",
+    "regions": ["global_distributed"],
+    "redundancy": "fully_distributed",
+    "sla_uptime": "99.9%"
+  },
+  "security": {
+    "encryption": "ed25519_signature",
+    "authentication": "peer_id_mandingu_tokens",
+    "rate_limiting": "per_peer_adaptive",
+    "network_filtering": "reputation_based"
+  },
+  "api_endpoints": {
+    "peer_discovery": "libp2p://bootstrap.crytonet.site",
+    "storage": "ipfs://gateway.crytonet.site",
+    "coordination": "http://consensus.crytonet.site"
+  },
+  "economic_model": {
+    "revenue_stream": "network_participation_rewards",
+    "pricing_tier": "stake_based_incentives",
+    "payment_settlement": "continuous",
+    "treasury_account": "AETHER_NODE"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "network_health_monitoring": "real_time",
+    "risk_threshold": 45
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 500,
+    "network_nodes": 250000,
+    "data_replication_factor": 3
+  }
+}

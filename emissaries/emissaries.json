@@ -1,0 +1,46 @@
+{
+  "emissaries": [
+    {
+      "name": "Kamata",
+      "role": "Heart AI",
+      "domain": "core_system",
+      "status": "active",
+      "capabilities": ["system_orchestration", "directive_parsing", "core_logic"]
+    },
+    {
+      "name": "Ntala",
+      "role": "Vault AI",
+      "domain": "treasury",
+      "status": "active",
+      "capabilities": ["economic_control", "liquidity_management", "reserve_tracking"]
+    },
+    {
+      "name": "Amata",
+      "role": "Security AI",
+      "domain": "security",
+      "status": "active",
+      "capabilities": ["fraud_detection", "risk_analysis", "threat_response"]
+    },
+    {
+      "name": "Mandingus",
+      "role": "Router AI",
+      "domain": "routing",
+      "status": "active",
+      "capabilities": ["directive_routing", "load_balancing", "path_optimization"]
+    },
+    {
+      "name": "Nakama",
+      "role": "Bridge AI",
+      "domain": "integration",
+      "status": "active",
+      "capabilities": ["api_management", "external_integration", "protocol_translation"]
+    },
+    {
+      "name": "Jetape",
+      "role": "Deployment AI",
+      "domain": "deployment",
+      "status": "active",
+      "capabilities": ["infrastructure_deploy", "environment_config", "service_orchestration"]
+    }
+  ]
+}
