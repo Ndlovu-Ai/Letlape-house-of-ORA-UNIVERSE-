@@ -1,0 +1,68 @@
+{
+  "domain": "xai-cloud.com",
+  "type": "sovereign_cloud_ai",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "XAI Cloud - Autonomous AI Infrastructure as a Service",
+  "governance": {
+    "council_id": "05",
+    "council_name": "MINDGRID",
+    "oversight": "ai_infrastructure"
+  },
+  "services": [
+    {
+      "name": "compute_orchestration",
+      "type": "kubernetes_multi_cloud",
+      "capacity": "unlimited_scale",
+      "protocol": "rest_api"
+    },
+    {
+      "name": "ai_model_hosting",
+      "type": "model_serving",
+      "capacity": "1000_concurrent_models",
+      "protocol": "triton_inference"
+    },
+    {
+      "name": "federated_learning",
+      "type": "distributed_ml",
+      "capacity": "unlimited_participants",
+      "protocol": "grpc"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "multi_cloud_hybrid",
+    "regions": ["aws_us_eu_asia", "gcp_us_eu_asia", "azure_us_eu_asia"],
+    "redundancy": "cross_cloud_failover",
+    "sla_uptime": "99.99%"
+  },
+  "security": {
+    "encryption": "end_to_end_tls_v3",
+    "authentication": "oauth2_mandingu_mfa",
+    "rate_limiting": "20000_req_per_minute",
+    "data_residency": "gdpr_compliant"
+  },
+  "api_endpoints": {
+    "compute": "https://api.xai-cloud.com/v1/compute",
+    "models": "https://api.xai-cloud.com/v1/models",
+    "federated_learning": "https://api.xai-cloud.com/v1/federated"
+  },
+  "economic_model": {
+    "revenue_stream": "pay_as_you_go_compute",
+    "pricing_tier": "variable_per_gpu_hour",
+    "payment_settlement": "hourly",
+    "treasury_account": "MINDGRID"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "resource_utilization_tracking": "real_time",
+    "risk_threshold": 60
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 100,
+    "gpu_utilization_percent": 95,
+    "compute_throughput_tflops": 1000000
+  }
+}

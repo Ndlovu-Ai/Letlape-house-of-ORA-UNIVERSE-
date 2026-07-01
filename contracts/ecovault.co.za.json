@@ -1,0 +1,68 @@
+{
+  "domain": "ecovault.co.za",
+  "type": "sovereign_digital_vault",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "EcoVault - Distributed Treasury & Asset Management System",
+  "governance": {
+    "council_id": "01",
+    "council_name": "VAULT_PRIME",
+    "oversight": "economic_architecture"
+  },
+  "services": [
+    {
+      "name": "vault_storage",
+      "type": "secure_storage",
+      "capacity": "unlimited",
+      "protocol": "rest_api"
+    },
+    {
+      "name": "asset_management",
+      "type": "portfolio_optimization",
+      "capacity": "real_time",
+      "protocol": "graphql"
+    },
+    {
+      "name": "reserve_tracking",
+      "type": "accounting",
+      "capacity": "unlimited",
+      "protocol": "rest_api"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "azure",
+    "regions": ["af-south", "eu-north", "us-central"],
+    "redundancy": "geographic_distribution",
+    "sla_uptime": "99.999%"
+  },
+  "security": {
+    "encryption": "aes_256_xts",
+    "authentication": "biometric_mandingu_hybrid",
+    "rate_limiting": "1000_req_per_minute",
+    "key_management": "hsm_backed"
+  },
+  "api_endpoints": {
+    "vault": "https://api.ecovault.co.za/v1/vault",
+    "assets": "https://api.ecovault.co.za/v1/assets",
+    "reserves": "https://api.ecovault.co.za/v1/reserves"
+  },
+  "economic_model": {
+    "revenue_stream": "storage_fees",
+    "pricing_tier": "tiered_by_volume",
+    "payment_settlement": "monthly",
+    "treasury_account": "VAULT_PRIME"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "asset_verification": "daily_reconciliation",
+    "risk_threshold": 40
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 200,
+    "throughput_assets_per_sec": 1000,
+    "data_integrity_rate": 99.999
+  }
+}

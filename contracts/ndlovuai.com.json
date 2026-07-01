@@ -1,0 +1,68 @@
+{
+  "domain": "ndlovuai.com",
+  "type": "sovereign_ai_commerce",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "NDLOVU AI - Commerce & Economic Intelligence Hub",
+  "governance": {
+    "council_id": "02",
+    "council_name": "MDALA_CORE",
+    "oversight": "treasury_capital_flow"
+  },
+  "services": [
+    {
+      "name": "commerce_engine",
+      "type": "transaction_processing",
+      "capacity": "50000_tps",
+      "protocol": "rest_api"
+    },
+    {
+      "name": "market_intelligence",
+      "type": "analytics",
+      "capacity": "real_time",
+      "protocol": "websocket"
+    },
+    {
+      "name": "payment_gateway",
+      "type": "settlement",
+      "capacity": "unlimited",
+      "protocol": "iso_20022"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "aws",
+    "regions": ["af-south", "eu-west", "us-east"],
+    "redundancy": "active_active",
+    "sla_uptime": "99.999%"
+  },
+  "security": {
+    "encryption": "aes_256_cbc",
+    "authentication": "multi_factor_mandingu",
+    "rate_limiting": "5000_req_per_minute",
+    "transaction_verification": "blockchain_notary"
+  },
+  "api_endpoints": {
+    "commerce": "https://api.ndlovuai.com/v1/commerce",
+    "market_data": "https://api.ndlovuai.com/v1/markets",
+    "settlement": "https://api.ndlovuai.com/v1/settlement"
+  },
+  "economic_model": {
+    "revenue_stream": "transaction_fees",
+    "pricing_tier": "0.5_percent_transaction",
+    "payment_settlement": "daily",
+    "treasury_account": "MDALA_CORE"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "fraud_detection": "real_time_ml",
+    "risk_threshold": 50
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 50,
+    "throughput_tps": 50000,
+    "settlement_success_rate": 99.98
+  }
+}

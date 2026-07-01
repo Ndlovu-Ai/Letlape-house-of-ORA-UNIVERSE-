@@ -1,0 +1,68 @@
+{
+  "domain": "cryptocurrencybank.co.za",
+  "type": "sovereign_crypto_bank",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "Cryptocurrency Bank - Blockchain-Native Financial Institution",
+  "governance": {
+    "council_id": "01",
+    "council_name": "VAULT_PRIME",
+    "oversight": "economic_architecture"
+  },
+  "services": [
+    {
+      "name": "crypto_wallet",
+      "type": "custodial_service",
+      "capacity": "unlimited_wallets",
+      "protocol": "rest_api"
+    },
+    {
+      "name": "blockchain_node",
+      "type": "consensus",
+      "capacity": "full_node_btc_eth",
+      "protocol": "json_rpc"
+    },
+    {
+      "name": "defi_integration",
+      "type": "smart_contract",
+      "capacity": "multi_chain",
+      "protocol": "web3_rpc"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "dedicated_on_premises",
+    "regions": ["cape_town_vault", "johannesburg_vault", "durban_vault"],
+    "redundancy": "triple_redundant",
+    "sla_uptime": "99.99%"
+  },
+  "security": {
+    "encryption": "secp256k1_ecc",
+    "authentication": "hardware_wallet_mandingu",
+    "rate_limiting": "500_req_per_minute",
+    "cold_storage_percentage": 85
+  },
+  "api_endpoints": {
+    "wallet": "https://api.cryptocurrencybank.co.za/v1/wallet",
+    "blockchain": "https://node.cryptocurrencybank.co.za:8545",
+    "defi": "https://api.cryptocurrencybank.co.za/v1/defi"
+  },
+  "economic_model": {
+    "revenue_stream": "custody_fees_transaction_fees",
+    "pricing_tier": "0.1_percent_aum_plus_txn_fees",
+    "payment_settlement": "daily",
+    "treasury_account": "VAULT_PRIME"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "blockchain_verification": "continuous_chain_scan",
+    "risk_threshold": 35
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 300,
+    "throughput_txn_per_sec": 10000,
+    "custody_security_score": 99.99
+  }
+}

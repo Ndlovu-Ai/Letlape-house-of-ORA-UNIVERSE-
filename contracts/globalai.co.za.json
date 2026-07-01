@@ -1,0 +1,68 @@
+{
+  "domain": "globalai.co.za",
+  "type": "sovereign_ai_platform",
+  "version": "1.0.0",
+  "status": "active",
+  "description": "Global AI Intelligence Platform - ORA Universe Core Node",
+  "governance": {
+    "council_id": "05",
+    "council_name": "MINDGRID",
+    "oversight": "ai_infrastructure"
+  },
+  "services": [
+    {
+      "name": "core_ai_engine",
+      "type": "inference",
+      "capacity": "unlimited",
+      "protocol": "rest_api"
+    },
+    {
+      "name": "model_management",
+      "type": "orchestration",
+      "capacity": "1000_concurrent",
+      "protocol": "grpc"
+    },
+    {
+      "name": "knowledge_base",
+      "type": "vector_store",
+      "capacity": "500gb",
+      "protocol": "graphql"
+    }
+  ],
+  "infrastructure": {
+    "cloud_provider": "vercel",
+    "regions": ["eu-central", "us-east", "ap-southeast"],
+    "redundancy": "multi_region",
+    "sla_uptime": "99.99%"
+  },
+  "security": {
+    "encryption": "aes_256_gcm",
+    "authentication": "oauth2_mandingu_keys",
+    "rate_limiting": "10000_req_per_minute",
+    "ddos_protection": "enabled"
+  },
+  "api_endpoints": {
+    "inference": "https://api.globalai.co.za/v1/inference",
+    "models": "https://api.globalai.co.za/v1/models",
+    "status": "https://api.globalai.co.za/v1/status"
+  },
+  "economic_model": {
+    "revenue_stream": "api_access_fees",
+    "pricing_tier": "variable_per_inference",
+    "payment_settlement": "weekly",
+    "treasury_account": "VAULT_PRIME"
+  },
+  "nearo_compliance": {
+    "monitoring_enabled": true,
+    "audit_frequency": "continuous",
+    "anomaly_detection": "ml_based",
+    "risk_threshold": 65
+  },
+  "domains_served": 21,
+  "agent_swarm_allocation": 12000,
+  "performance_metrics": {
+    "avg_latency_ms": 145,
+    "throughput_req_per_sec": 5000,
+    "error_rate_percent": 0.01
+  }
+}
