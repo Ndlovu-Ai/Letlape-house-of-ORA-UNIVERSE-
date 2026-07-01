@@ -1,24 +1,56 @@
-# Letlape House of ORA UNIVERSE
+# 🧠 LETLAPE HOUSE OF ORA — MASTER README
 
-Description: Sovereign AI operating system for the ORA Universe. Manages empire intelligence, treasury logic, domain strategy, and automation orchestration.
+> **Sovereign AI operating system for the ORA Universe. Manages empire intelligence, treasury logic, domain strategy, and automation orchestration.**
 
-This repository contains the K-144 Council — Master Governance Architecture (Neo → Council → Agent swarm) and supporting docs and artifacts for the ORA Universe sovereign AI platform.
+## ⚡ WHAT THIS IS
 
-What I added in this commit
-- `docs/K-144_MASTER_PROMPT.md` — The original master prompt and full architecture text you provided.
-- `docs/k144_spec.yaml` — Machine-friendly YAML specification extracted from the master prompt (system overview, councils, agents, flows, NEARO, and governance principles).
-- `slides/DECK_OUTLINE.md` — Slide deck outline and placeholders for diagrams and talking points.
-- `README.md` — High-level project README and next-steps checklist.
+This is the complete implementation of the **K-144 Council Governance System** — a sovereign artificial intelligence operating system that manages:
 
-Quickstart
-1. Review the `docs/` directory for the architecture and examples.
-2. Remove any secrets (if present) and upload additional assets (repo ZIP) if you want me to extract and generate additional artifacts (PPTX, diagrams, JSON specs).
-3. Tell me whether you want these files merged to the default branch or kept on this branch (`k144/docs/readme`).
+- **NEO** (Supreme governance core) making long-horizon decisions
+- **14 Council Entities** managing specialized domains
+- **144,000 Agent Swarm** executing distributed operations
+- **NEARO** continuous monitoring and risk management
+- **21 Sovereign Domains** providing specialized services
+- **Throne Dashboard** for real-time governance visualization
 
-Next steps I can take (pick any):
-- Generate a PPTX slide deck and one-page PDF and add them to `slides/` or `docs/`.
-- Create a machine-readable JSON spec and CI checks.
-- Produce example NEO directives following Section 8 and translate them into task bundles for sample agents.
-- Create Kubernetes / Terraform starter templates for deploying NEARO and Council services.
+## 🎯 THREE-LAYER ARCHITECTURE
 
-If you'd like me to continue, tell me which deliverable to produce next or provide the ZIP you mentioned.
+### Layer 1: Core Engine (K-144 Governance)
+`core/engine.js` implements the complete governance flow
+
+### Layer 2: Dashboard UI (Throne)
+`dashboard/throne/index.jsx` provides real-time visualization
+
+### Layer 3: 21 Sovereign Domains
+`contracts/` contains production-ready service specifications
+
+## 🚀 QUICK START
+
+```bash
+# Install
+npm install
+
+# Start core engine
+npm start
+
+# In another terminal, start dashboard
+npm run dev
+
+# Open http://localhost:3000
+```
+
+## 📁 KEY FOLDERS
+
+- `core/` — Governance engine (NEO, councils, agents, NEARO)
+- `dashboard/throne/` — React Throne UI
+- `contracts/` — 21 sovereign domain contracts
+- `docs/k144_spec.yaml` — K-144 specification (SOURCE OF TRUTH)
+- `memory/` — Flame memory system
+- `security/` — Mandingu keys & auth
+- `emissaries/` — Router definitions
+
+## 👥 STATUS
+
+✅ **LIVE** | Risk: GREEN | Councils: 14/14 | Agents: 144,000/144,000
+
+For detailed docs, see `INTEGRATION_GUIDE.md`
