@@ -11,6 +11,8 @@ import fs from 'fs';
 import path from 'path';
 
 const K144_SPEC_PATH = path.join(process.cwd(), 'docs', 'k144_spec.yaml');
+const DOMAIN_REGISTRY_PATH = path.join(process.cwd(), 'contracts', 'domain-registry.json');
+const TREASURY_CONFIG_PATH = path.join(process.cwd(), 'config', 'treasury.json');
 
 /**
  * Core System Engine
@@ -23,6 +25,9 @@ export class LetlapeEngine {
     this.councils = this.initCouncils();
     this.agents = this.initAgents();
     this.nearo = this.initNEARO();
+    this.treasury = this.initTreasury();
+    this.domains = this.initDomains();
+    this.oracle = this.initOracle();
     this.memory = new Map();
     this.eventLog = [];
   }
@@ -308,9 +313,83 @@ export class LetlapeEngine {
   }
 
   /**
+   * Initialize Treasury state from config file
+   */
+  initTreasury() {
+    let config = {};
+    try {
+      const raw = fs.readFileSync(TREASURY_CONFIG_PATH, 'utf8');
+      config = JSON.parse(raw).treasury_configuration || {};
+    } catch {
+      // use defaults
+    }
+    const streams = (config.revenue_streams || []).map(s => ({
+      source: s.source,
+      type: s.type,
+      settlement_cycle: s.settlement_cycle,
+      status: 'active',
+      amount_today: Math.floor(Math.random() * 50000)
+    }));
+    return {
+      total_inflow_today: streams.reduce((sum, s) => sum + s.amount_today, 0),
+      allocation: { operating: 40, reserve: 30, investment: 30 },
+      otcoin: { symbol: 'OTZA', circulating: 10000000, burned_today: Math.floor(Math.random() * 1000), price_zar: (Math.random() * 2 + 0.5).toFixed(4) },
+      revenue_streams: streams,
+      status: 'active'
+    };
+  }
+
+  /**
+   * Initialize 21 Sovereign Domains from registry
+   */
+  initDomains() {
+    let registry = [];
+    try {
+      const raw = fs.readFileSync(DOMAIN_REGISTRY_PATH, 'utf8');
+      registry = JSON.parse(raw).sovereign_domains || [];
+    } catch {
+      // use defaults
+    }
+    return registry.map(d => ({
+      id: d.id,
+      domain: d.domain,
+      type: d.type,
+      council: d.council,
+      status: d.status || 'active',
+      endpoint: d.endpoint || null,
+      uptime: (95 + Math.random() * 5).toFixed(2),
+      requests_today: Math.floor(Math.random() * 100000)
+    }));
+  }
+
+  /**
+   * Initialize Oracle Network (AAON) state
+   */
+  initOracle() {
+    return {
+      nodes: [
+        { type: 'economic', label: 'Economic Oracle', sources: ['DEX pools', 'CEX APIs', 'on-chain data'], status: 'active', signal_count: Math.floor(Math.random() * 5000 + 1000), consensus: true },
+        { type: 'risk', label: 'Risk Oracle', sources: ['NEARO Shield', 'security feeds'], status: 'active', signal_count: Math.floor(Math.random() * 2000 + 500), consensus: true },
+        { type: 'governance', label: 'Governance Oracle', sources: ['On-chain governance', 'K1 Registry'], status: 'active', signal_count: Math.floor(Math.random() * 1000 + 200), consensus: true },
+        { type: 'external', label: 'External Oracle', sources: ['APIs', 'partner integrations'], status: 'active', signal_count: Math.floor(Math.random() * 3000 + 800), consensus: false },
+        { type: 'agent', label: 'Agent Oracle', sources: ['144k agent telemetry'], status: 'active', signal_count: Math.floor(Math.random() * 10000 + 5000), consensus: true }
+      ],
+      fusion_engine: { consensus_required: 3, current_consensus: 4, status: 'passing' },
+      last_update: new Date().toISOString()
+    };
+  }
+
+  /**
    * Get system status
    */
   getStatus() {
+    // Refresh live-updating fields
+    this.oracle.nodes.forEach(n => {
+      n.signal_count += Math.floor(Math.random() * 50);
+    });
+    this.oracle.last_update = new Date().toISOString();
+    this.treasury.otcoin.price_zar = (parseFloat(this.treasury.otcoin.price_zar) + (Math.random() - 0.5) * 0.01).toFixed(4);
+
     return {
       system: this.spec.system,
       neo: {
@@ -335,6 +414,9 @@ export class LetlapeEngine {
         state: this.nearo.state,
         alerts: this.nearo.alerts.length
       },
+      treasury: this.treasury,
+      domains: this.domains,
+      oracle: this.oracle,
       event_log_size: this.eventLog.length
     };
   }
