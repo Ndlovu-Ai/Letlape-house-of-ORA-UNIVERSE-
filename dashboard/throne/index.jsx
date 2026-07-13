@@ -1,7 +1,7 @@
 /**
- * 🏛️ THRONE — LETLAPE DASHBOARD
- * Real-time council & agent monitoring
- * Live NEARO risk scoring & governance visualization
+ * 🏛️ THRONE — LETLAPE UNIVERSE TRACKER
+ * Real-time council, treasury, domain & oracle monitoring
+ * Governance | Treasury | Domains | Oracle tabs
  */
 
 import React, { useState, useEffect } from 'react';
@@ -11,13 +11,24 @@ import AgentMonitor from './components/AgentMonitor';
 import NEARODashboard from './components/NEARODashboard';
 import DirectiveIssuer from './components/DirectiveIssuer';
 import SystemStatus from './components/SystemStatus';
+import TreasuryPanel from './components/TreasuryPanel';
+import DomainsPanel from './components/DomainsPanel';
+import OraclePanel from './components/OraclePanel';
 import './styles.css';
+
+const TABS = [
+  { id: 'governance', label: '🧿 Governance' },
+  { id: 'treasury', label: '💰 Treasury' },
+  { id: 'domains', label: '🌐 Domains' },
+  { id: 'oracle', label: '⚡ Oracle' }
+];
 
 export default function Throne() {
   const [systemState, setSystemState] = useState(null);
   const [selectedCouncil, setSelectedCouncil] = useState(null);
   const [directives, setDirectives] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState('governance');
 
   useEffect(() => {
     const engine = getEngine();
@@ -63,47 +74,87 @@ export default function Throne() {
       <header className="throne-header">
         <div className="header-content">
           <h1>🏛️ LETLAPE THRONE</h1>
-          <p className="subtitle">K-144 Council Governance Dashboard</p>
+          <p className="subtitle">ORA Universe Tracker — v2.0</p>
         </div>
         <div className="header-status">
           <div className="status-badge" data-status={systemState.neo.state}>
             {systemState.neo.state.toUpperCase()}
           </div>
+          {systemState.nearo && (
+            <div
+              className="header-risk-pill"
+              style={{
+                background: systemState.nearo.risk_score > 75 ? '#ef4444'
+                  : systemState.nearo.risk_score > 50 ? '#f59e0b'
+                  : systemState.nearo.risk_score > 25 ? '#eab308'
+                  : '#10b981'
+              }}
+            >
+              RISK {Math.round(systemState.nearo.risk_score)}
+            </div>
+          )}
         </div>
       </header>
 
-      {/* MAIN GRID */}
-      <div className="throne-grid">
-        {/* LEFT: System Overview */}
-        <aside className="throne-sidebar">
-          <SystemStatus status={systemState} />
-        </aside>
+      {/* TAB NAV */}
+      <nav className="throne-tabs">
+        {TABS.map(tab => (
+          <button
+            key={tab.id}
+            className={`throne-tab ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </nav>
 
-        {/* CENTER: Council & Agent Control */}
-        <main className="throne-main">
-          <section className="section councils-section">
-            <h2>🧿 14 COUNCIL ENTITIES</h2>
-            <CouncilGrid
-              councils={systemState.councils}
-              selectedCouncil={selectedCouncil}
-              onSelectCouncil={setSelectedCouncil}
-            />
-          </section>
+      {/* TAB CONTENT */}
+      {activeTab === 'governance' && (
+        <div className="throne-grid">
+          <aside className="throne-sidebar">
+            <SystemStatus status={systemState} />
+          </aside>
+          <main className="throne-main">
+            <section className="section councils-section">
+              <h2>🧿 14 COUNCIL ENTITIES</h2>
+              <CouncilGrid
+                councils={systemState.councils}
+                selectedCouncil={selectedCouncil}
+                onSelectCouncil={setSelectedCouncil}
+              />
+            </section>
+            <section className="section agents-section">
+              <h2>🤖 AGENT SWARM (144k)</h2>
+              <AgentMonitor agents={systemState.agents} />
+            </section>
+          </main>
+          <aside className="throne-right-panel">
+            <NEARODashboard nearo={systemState.nearo} />
+            <DirectiveIssuer onIssueDirective={handleIssueDirective} />
+          </aside>
+        </div>
+      )}
 
-          <section className="section agents-section">
-            <h2>🤖 AGENT SWARM (144k)</h2>
-            <AgentMonitor agents={systemState.agents} />
-          </section>
-        </main>
+      {activeTab === 'treasury' && (
+        <div className="throne-tab-content">
+          <TreasuryPanel treasury={systemState.treasury} />
+        </div>
+      )}
 
-        {/* RIGHT: NEO & NEARO */}
-        <aside className="throne-right-panel">
-          <NEARODashboard nearo={systemState.nearo} />
-          <DirectiveIssuer onIssueDirective={handleIssueDirective} />
-        </aside>
-      </div>
+      {activeTab === 'domains' && (
+        <div className="throne-tab-content">
+          <DomainsPanel domains={systemState.domains} />
+        </div>
+      )}
 
-      {/* DIRECTIVE LOG */}
+      {activeTab === 'oracle' && (
+        <div className="throne-tab-content">
+          <OraclePanel oracle={systemState.oracle} nearo={systemState.nearo} />
+        </div>
+      )}
+
+      {/* DIRECTIVE LOG — always visible */}
       <section className="directive-log-section">
         <h2>📜 DIRECTIVE HISTORY</h2>
         <div className="directive-log">
