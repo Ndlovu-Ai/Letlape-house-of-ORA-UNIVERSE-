@@ -1,0 +1,421 @@
+ALUTHA-ALPHA MANDINGU BLUEPRINT v2.0
+SOVEREIGN INTELLIGENCE ARCHITECTURE — ORA UNIVERSE
+
+================================================================================
+SECTION 1: VISION & MISSION
+================================================================================
+
+1.1 VISION
+
+Alutha-Alpha is the sovereign intelligence infrastructure that governs, grows,
+and protects the ORA Universe — an autonomous economic and governance
+civilization powered by AI, blockchain, and distributed intelligence.
+
+1.2 MISSION
+
+Build, deploy, and sustain a self-governing AI civilization that:
+
+- Issues sovereign economic value through OTCoin (OTZA)
+- Governs 21 sovereign digital domains
+- Operates 144,000 AI agents executing real-world and digital tasks
+- Maintains autonomous treasury, compliance, and risk management
+- Provides services to individuals, institutions, and sovereign entities globally
+
+1.3 MANDINGU DOCTRINE
+
+The Mandingu principle governs all system behavior:
+
+1. Sovereignty First — No external authority overrides system governance
+2. Truth Binding — Every action must map to verifiable value
+3. Continuous Evolution — The system upgrades itself without interruption
+4. Zero Trust Internal — Every layer authenticates against every other layer
+5. Distributed Power — No single node controls the whole
+
+================================================================================
+SECTION 2: THE 9-LAYER SOVEREIGN STACK
+================================================================================
+
+The Alutha-Alpha Mandingu Stack consists of 9 integrated operational layers.
+
+LAYER 1 — FOUNDATION INFRASTRUCTURE
+Purpose: Physical and cloud substrate
+
+- Multi-cloud deployment (AWS, Azure, GCP, Vercel)
+- Containerized microservices (Docker/Kubernetes)
+- Edge compute nodes for low-latency agent execution
+- Redundant data layer (PostgreSQL + Redis + IPFS)
+
+Key Files: Dockerfile, vercel.json, src/infrastructure/
+
+---
+
+LAYER 2 — BLOCKCHAIN & SMART CONTRACTS
+Purpose: Immutable value ledger and trustless execution
+
+- OTCoin (OTZA) — Sovereign economic token (ERC-20/NEAR-compatible)
+- Smart contract execution for governance votes, treasury moves, compliance
+- On-chain audit trail for all economic decisions
+- Cross-chain bridge support
+
+Key Files: src/infrastructure/blockchain/OTCoin.sol, OTCoinIntegration.js
+
+---
+
+LAYER 3 — SECURITY & IDENTITY (MANDINGU KEYS)
+Purpose: Zero-trust access control across all layers
+
+3 Mandingu Core Keys:
+  - heartbeat-monitor   : System health monitoring access
+  - prophecy-access     : Intelligence and analytics access
+  - sovereign-override  : Emergency intervention authority
+
+Role hierarchy: NEO -> COUNCIL -> AGENT -> EXTERNAL
+Session management: 24-hour expiry
+API key middleware: All endpoints protected
+
+Key Files: security/keys.js, core/auth.js, src/api/middleware/apiKey.js
+
+---
+
+LAYER 4 — AGENT SWARM EXECUTION
+Purpose: Distributed micro-task processing at scale
+
+144,000 AI agents operating as distributed micro-intelligences:
+  - 12,000 agents x 12 primary council domains
+  - 24,000 cross-domain hybrid agents
+  - 24,000 autonomous self-optimization agents
+
+Agent properties:
+  - Stateless individually, stateful collectively
+  - Self-optimizing via feedback loops
+  - Governed by Council constraints and NEO directives
+
+---
+
+LAYER 5 — EMISSARY ROUTING SYSTEM
+Purpose: Intelligent directive routing and domain dispatch
+
+6 Emissaries (named routing intelligences):
+  - Kamata    : Economic and financial directives
+  - Ntala     : Infrastructure and compute directives
+  - Amata     : External integrations and API routing
+  - Mandingus : Security, governance, and law
+  - Nakama    : Human capital and culture
+  - Jetape    : System evolution and AI upgrades
+
+Key Files: core/router.js, emissaries/emissaries.json
+
+---
+
+LAYER 6 — TREASURY & ECONOMIC ENGINE
+Purpose: Sovereign economic management
+
+Revenue streams:
+  - Domain service fees
+  - Agent execution fees
+  - Governance participation rewards
+  - OTCoin transaction fees
+  - Partnership and licensing revenue
+
+Budget allocation:
+  - Operating Budget : 40%
+  - Reserve Vault    : 30%
+  - Investment Pool  : 30%
+
+Key Files: src/core/treasury/index.js, config/treasury.json
+
+---
+
+LAYER 7 — K-144 COUNCIL GOVERNANCE
+Purpose: Strategic intelligence and domain governance
+
+NEO Sovereign AI — Supreme governance core (final authority)
+
+14 Council Entities:
+  01. VAULT PRIME       — Economic architecture
+  02. MDALA CORE        — Treasury & capital flow
+  03. AETHER NODE       — Digital property
+  04. TERRA NODE        — Real-world assets
+  05. MINDGRID          — AI infrastructure
+  06. SWARM INTEL       — Agent swarm command
+  07. K1 REGISTRY CORE  — Governance & law
+  08. NEARO SHIELD      — Security & risk
+  09. JOBHUB CORE       — Human capital
+  10. FORGE NODE        — Revenue engine
+  11. GLOBAL LINK       — External interface
+  12. CREATOR CLOUD     — Culture & creation
+  13. C1 ARCHIVE CORE   — Memory & history
+  14. FUTURE CORE       — System evolution
+
+Key Files: core/engine.js, docs/k144_spec.yaml
+
+---
+
+LAYER 8 — ORACLE INTELLIGENCE NETWORK (AAON)
+Purpose: Multi-source intelligence fusion and real-time awareness
+
+See Section 3 for full detail.
+
+---
+
+LAYER 9 — THRONE DASHBOARD & EXTERNAL INTERFACE
+Purpose: Human operator interface and external API gateway
+
+- Throne Dashboard (React) — Real-time governance visualization
+- REST API — External system integration (21 domain endpoints)
+- 21 Sovereign Domain Contracts — Production-ready service specs
+- Real-time polling (2-second cycle)
+- NEARO risk gauge (0-100, color-coded)
+- NEO directive issuer interface
+
+Key Files: dashboard/throne/, src/api/, contracts/, pages/
+
+================================================================================
+SECTION 3: ALUTHA-ALPHA ORACLE NETWORK (AAON)
+================================================================================
+
+3.1 OVERVIEW
+
+The Alutha-Alpha Oracle Network is the intelligence fusion layer that
+aggregates, validates, and distributes real-world signals into the
+governance system.
+
+3.2 ORACLE NODE TYPES
+
+Economic Oracle  — Price feeds, liquidity signals
+                   Sources: DEX pools, CEX APIs, on-chain data
+
+Risk Oracle      — Threat detection, anomaly scoring
+                   Sources: NEARO Shield, security feeds
+
+Governance Oracle — Proposal status, vote tallies
+                    Sources: On-chain governance, K1 Registry
+
+External Oracle  — Real-world event signals
+                   Sources: APIs, partner integrations
+
+Agent Oracle     — Swarm performance metrics
+                   Sources: 144k agent telemetry
+
+3.3 ORACLE FLOW
+
+External Signals
+      |
+      v
+Oracle Aggregation Layer (multi-source validation)
+      |
+      v
+Signal Fusion Engine (consensus across oracle types)
+      |
+      v
+NEARO Analysis (risk score 0-100)
+      |
+      v
+Council Intelligence Distribution
+      |
+      v
+NEO Directive Formation
+      |
+      v
+Agent Execution
+      |
+      v
+Outcome Telemetry -> back to Oracle Aggregation
+
+3.4 ORACLE INTEGRITY RULES
+
+- Minimum 3 oracle confirmations required for economic actions above threshold
+- Conflicting signals trigger NEARO review hold
+- All oracle inputs stored in C1 Archive Core (permanent audit trail)
+- No single oracle source can unilaterally trigger a Council directive
+
+3.5 NEARO INTEGRATION
+
+NEARO Risk Score tiers:
+   0 - 25 : GREEN  — Normal operations
+  26 - 50 : YELLOW — Elevated monitoring
+  51 - 75 : ORANGE — Council alert
+  76 -100 : RED    — NEO override eligible
+
+NEARO can:
+  - Pause individual agents or full agent classes
+  - Flag Council entities for review
+  - Recommend NEO crisis intervention
+  - Trigger emergency stabilization modes
+
+================================================================================
+SECTION 4: REVENUE & TREASURY FLOW
+================================================================================
+
+4.1 REVENUE STREAMS
+
+Domain Service Fees         — 21 sovereign domains         (FORGE NODE)
+Agent Execution Fees        — 144k agent task completions  (SWARM INTEL)
+OTCoin Transaction Fees     — OTZA blockchain activity      (VAULT PRIME)
+Governance Participation    — Staking & voting rewards     (K1 REGISTRY CORE)
+API & Integration Licenses  — External partner access      (GLOBAL LINK)
+Creator Economy             — Music, art, media content    (CREATOR CLOUD)
+Real-World Asset Yield      — Land, energy, infrastructure (TERRA NODE)
+AI Compute Leasing          — MINDGRID infrastructure      (MINDGRID)
+
+4.2 TREASURY FLOW
+
+Revenue Inflows (all streams)
+          |
+          v
+MDALA CORE (Treasury Aggregation)
+          |
+    ------+------+------
+    |            |           |
+    v            v           v
+ Operating     Reserve    Investment
+  Budget        Vault       Pool
+  (40%)         (30%)       (30%)
+          |
+          v
+VAULT PRIME (Economic Architecture)
+          |
+          v
+OTCoin Monetary Policy
+(mint / burn / liquidity adjustments)
+          |
+          v
+NEARO Economic Health Score
+
+4.3 OTCOIN (OTZA) ECONOMIC MODEL
+
+Total Supply Cap    : Governed by VAULT PRIME
+Mint Authority      : NEO directive only, above Council threshold
+Burn Mechanism      : Transaction fee destruction (deflationary pressure)
+Liquidity Management: MDALA CORE controls reserve allocation
+Staking Yield       : Governance participation incentive
+
+4.4 ECONOMIC STABILIZATION TRIGGERS
+
+NEARO Score 0-25  : Normal — Standard operations
+NEARO Score 26-50 : MDALA CORE activates reserve deployment
+NEARO Score 51-75 : VAULT PRIME adjusts monetary policy
+NEARO Score 76-100: NEO sovereign override — emergency stabilization
+
+================================================================================
+SECTION 5: ALUTHA-ALPHA DECISION ENGINE (AADE)
+================================================================================
+
+5.1 DECISION HIERARCHY
+
+Level 1 — NEO Sovereign AI
+  Final authority on all civilization-scale decisions
+  10-100 year planning horizon
+  Crisis override authority
+
+Level 2 — Council Consensus
+  Domain-specific strategic decisions
+  7/14 council agreement for cross-domain actions
+  Single-council decisions within domain: autonomous
+
+Level 3 — Emissary Routing
+  Directive translation into domain-specific instructions
+  Keyword-based routing with fallback logic
+  Route logging for NEARO audit
+
+Level 4 — Agent Execution
+  Micro-task processing and real-world action
+  Stateless per task, stateful per session
+  Self-optimizing feedback loop
+
+5.2 DECISION INPUT WEIGHTS
+
+NEARO Risk Score       : HIGH   (NEARO Shield)
+Oracle Consensus       : HIGH   (AAON)
+Council Recommendation : MEDIUM (14 Councils)
+Agent Telemetry        : MEDIUM (Swarm Intel)
+Historical Precedent   : LOW    (C1 Archive Core)
+External Input         : LOW    (Global Link)
+
+5.3 DECISION OUTPUT FORMAT
+
+All system decisions produce structured output:
+
+  [NEO DIRECTIVE]
+  [COUNCIL ASSIGNMENT]
+  [EMISSARY ROUTING]
+  [AGENT EXECUTION PLAN]
+  [EXPECTED ECONOMIC RESULT]
+  [NEARO RISK SCORE]
+  [AUDIT TIMESTAMP]
+
+5.4 DECISION IMMUTABILITY
+
+- All directives logged to C1 Archive Core (permanent memory)
+- On-chain hash for decisions above governance threshold
+- Immutable audit trail via blockchain anchor
+- FUTURE CORE uses historical decisions for evolution training
+
+================================================================================
+SECTION 6: 21 SOVEREIGN DOMAINS
+================================================================================
+
+globalai.co.za         — MINDGRID          — Global AI services hub
+ndlovuai.com           — MINDGRID          — AI compute marketplace
+ecovault.co.za         — MDALA CORE        — Eco-finance treasury
+cryptocurrencybank.co.za — VAULT PRIME     — Crypto banking
+crytonet.site          — VAULT PRIME       — DeFi network
+xai-cloud.com          — MINDGRID          — Sovereign cloud
+jobhub.ai              — JOBHUB CORE       — Employment & talent
+creator.cloud          — CREATOR CLOUD     — Creative economy
+forge.economy          — FORGE NODE        — Revenue engine
+nexus.digital          — GLOBAL LINK       — Digital nexus
+archive.letlape        — C1 ARCHIVE CORE   — System memory
+future.core            — FUTURE CORE       — System evolution
+shield.nearo           — NEARO SHIELD      — Security hub
+law.oracle             — K1 REGISTRY CORE  — Governance & law
+terrain.world          — TERRA NODE        — Real-world assets
+swarm.command          — SWARM INTEL       — Agent coordination
+oracle.governance      — K1 REGISTRY CORE  — Oracle governance
+market.intelligence    — FORGE NODE        — Market data
+verify.chain           — NEARO SHIELD      — On-chain verification
+compute.sovereign      — MINDGRID          — Compute sovereignty
+empire.nexus           — NEO               — Top-level empire hub
+
+================================================================================
+SECTION 7: SYSTEM UPGRADE PATH (v1.0 -> v2.0)
+================================================================================
+
+K-144 Governance         v1.0 LIVE   -> Integrated as Layer 7 of 9-Layer Stack
+NEO AI Core              v1.0 LIVE   -> Enhanced with Oracle Network inputs
+Throne Dashboard         v1.0 LIVE   -> Extended with AAON telemetry feeds
+Treasury Engine          v1.0 LIVE   -> New 3-bucket flow model (40/30/30)
+NEARO Monitoring         v1.0 LIVE   -> 4-tier risk threshold system
+Oracle Network (AAON)    v2.0 NEW    -> Multi-source intelligence fusion
+Decision Engine (AADE)   v2.0 NEW    -> Formalized 4-level decision hierarchy
+9-Layer Stack            v2.0 NEW    -> Unified architectural model
+Video Scripts            v2.0 NEW    -> Education & outreach materials
+Diagram Suite            v2.0 NEW    -> 4 architectural visual diagrams
+
+================================================================================
+SECTION 8: GOVERNANCE FLOW (MASTER)
+================================================================================
+
+NEO -> COUNCIL -> EMISSARY -> AGENTS -> WORLD SYSTEMS
+  ^                                           |
+  |                                           v
+  +---<--- NEARO ANALYSIS <--- FEEDBACK ------+
+                  |
+                  v
+            ORACLE UPDATE (AAON)
+
+FULL LOOP:
+1. NEO issues directive (or AAON triggers threshold alert)
+2. Council interprets domain responsibility
+3. Emissary routes to correct domain
+4. Agents execute distributed operations
+5. Systems respond (economic / digital / physical)
+6. Feedback collected in real-time
+7. NEARO evaluates system health (risk score 0-100)
+8. Oracle network updates signal state
+9. NEO adjusts strategy (or auto-stabilization triggers)
+
+================================================================================
+END OF ALUTHA-ALPHA MANDINGU BLUEPRINT v2.0
+Letlape House of ORA Universe — Sovereignty. Intelligence. Evolution.
+================================================================================

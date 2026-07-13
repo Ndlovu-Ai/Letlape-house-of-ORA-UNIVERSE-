@@ -48,6 +48,7 @@ npm run dev
 - `memory/` — Flame memory system
 - `security/` — Mandingu keys & auth
 - `emissaries/` — Router definitions
+- `Alutha-Alpha-Mandingu-Blueprint-v2.0/` — **v2.0 Master Blueprint** (9-Layer Stack, Oracle Network, Treasury, Decision Engine)
 
 ## 👥 STATUS
 
